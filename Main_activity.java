@@ -11,7 +11,15 @@ public class MainActivity extends AppCompatActivity {
     private GalleryAdapter adapter;
     private Floatingaction_button fab;
     private Context context;
-
+    
+     FloatingActionButton fab = findViewById(R.id.fab);
+fab.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+    }
+});
 
 
     Gallery simpleGallery;
