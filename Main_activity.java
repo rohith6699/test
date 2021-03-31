@@ -1,19 +1,25 @@
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageView;
+
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private MyAdapter adapter;
-    private ArrayList<Emp>empArrayList;
-    private FloatingActionButton fab;
+    private GalleryAdapter adapter;
+    private Floatingaction_button fab;
     private Context context;
 
 
-
-public class MainActivity extends AppCompatActivity {
 
     Gallery simpleGallery;
     CustomGalleryAdapter customGalleryAdapter;
     ImageView selectedImageView;
     
-    int[] images = {
+    int[] images = {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5,
+            R.drawable.image6};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +52,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(onAddingListener());
     }
     private void setRecyclerViewData() {
-        context.add(new context(R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5,
-            R.drawable.image6, R.drawable.image7, R.drawable.image8, R.drawable.image9, R.drawable.image10, R.drawable.image11,
-            R.drawable.image12, R.drawable.image13);
-        
+        context.add(new context("Gallery","image1");
+        context.add(new context("Gallery","image2")
+        context.add(new context("Gallery","image3");
+         context.add(new context("Gallery","image4");
+        context.add(new context("Gallery","image5");
+        context.add(new context("Gallery","image6");
+
     }
     private View.OnClickListener onAddingListener() {
         return new View.OnClickListener() {
@@ -73,8 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 button2Cancel.setOnClickListener(onCancelListener(dialog));
                 dialog.show();
             }
-        };
-    }
+       };
+  }
+        
+    
     private AdapterView.OnItemSelectedListener onItemSelectedListener() {
         return new AdapterView.OnItemSelectedListener() {
             @Override
