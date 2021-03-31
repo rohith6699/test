@@ -63,14 +63,14 @@ public class MainActivity extends AppCompatActivity {
                 EditText name = (EditText) dialog.findViewById(R.id.simpleGallery);
                 EditText job = (EditText) dialog.findViewById(R.id.selectedImageview);
                 
-                View buttonOk=dialog.findViewById(R.id.btn_ok);
-                View buttonCancel = dialog.findViewById(R.id.btn_cancel);
+                View button1Ok=dialog.findViewById(R.id.btn_ok);
+                View button2Cancel = dialog.findViewById(R.id.btn_cancel);
                 
                 
                 
                
-                buttonOk.setOnClickListener(onConfirmListener(simpleGallery,selectedImageview));
-                buttonCancel.setOnClickListener(onCancelListener(dialog));
+                button1Ok.setOnClickListener(onConfirmListener(simpleGallery,selectedImageview));
+                button2Cancel.setOnClickListener(onCancelListener(dialog));
                 dialog.show();
             }
         };
